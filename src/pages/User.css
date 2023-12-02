@@ -1,0 +1,114 @@
+.userContainer {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .cardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    height: auto;
+    width: 200px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  .avatarContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+  }
+  
+  .avatar {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+  }
+  
+  .genderIcon {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    padding: 1px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 5px;
+    bottom: 5px;
+  }
+  
+  .genderIcon.Male {
+    background-color: #3498db;
+    border: 1px solid #3498db;
+  }
+  
+  .genderIcon.Female {
+    background-color: rgb(231, 60, 163);
+    border: 1px solid rgb(231, 60, 163);
+  }
+  
+  .genderIcon.Bigender {
+    background-color: #9b59b6;
+    border: 1px solid #9b59b6;
+  }
+  
+  .availabilityIcon {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    font-size: 15px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .green {
+    background-color: green;
+    right: 5px;
+  }
+  
+  .red {
+    background-color: red;
+    right: 5px;
+  }
+  
+  .userEmail {
+    font-size: 0.8em;
+    color: blueviolet;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left !important;
+  }
+  

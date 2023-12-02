@@ -1,12 +1,135 @@
-.NavbarContainer{
+.NavbarContainer {
     height: 10vh;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     font-size: 1.2rem;
     position: sticky;
     top: 0;
     z-index: 999;
     width: 100%;
-    background: #ffffff00;
-}
+    padding: 0 10px;
+    background: linear-gradient(to right, #f7d1ff, #ffcdda);
+  }
+  
+  .NavbarContainer .logo {
+    font-size: 2em;
+    font-weight: 600;
+    position: relative;
+    left: 0;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  .logoLink{
+    text-decoration: none;
+    color: #111;
+  }
+  .searchMenu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .userSearch {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #000000;
+    border-radius: 25px;
+    padding: 5px 10px;
+    height: 6vh;
+    margin: 0 10px;
+  }
+  
+  .searchInput {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    padding: 0 10px;
+    background: transparent;
+  }
+  
+  .userSearch input:focus {
+    outline: none;
+  }
+  
+  .menuButton {
+    display: flex;
+    position: relative;
+    right: 0;
+    height: 10vh;
+    width: 10vh;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+  }
+  
+  .menuButton ion-icon {
+    font-size: 3em;
+    cursor: pointer;
+  }
+  
+  .menuContainer {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: -100%; /* Initial position off-screen */
+    width: 200px; /* Adjust the width as needed */
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    transition: right 1.5s ease;
+    z-index: 1000;
+    padding: 20px;
+    align-items: flex-start;
+  }
+  
+.menuContainer.show {
+    right: 0;
+    transition: ease-out;
+  }
+  
+  .menuContainer ul {
+    list-style: none;
+    padding: 0;
+    margin: 10vh 0;
+  }
+  
+  .menuContainer li {
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  .menuContainer li:hover {
+    background: rgb(165, 133, 255);
+  }
+  
+  .menuContainer a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+  }
+  
+  .menuContainer ion-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .userSearch {
+      margin: 0 5px;
+    }
+  }
+   
+  @media (max-width: 300px) {
+    .NavbarContainer .logo{
+      font-size: 1.5em;
+    }
+  }
