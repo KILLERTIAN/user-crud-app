@@ -1,0 +1,22 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "latest": "^0.2.0",
+    "mongoose": "^8.0.2",
+    "n": "^9.2.0",
+    "nodemon": "^3.0.2",
+    "cors": "^2.8.5"
+  }
+}
