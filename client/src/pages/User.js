@@ -114,7 +114,7 @@ function User() {
             <h3>{`${user.first_name} ${user.last_name}`}</h3>
             <p className="userEmail">{user.email}</p>
             <p>{user.gender}</p>
-            <p>Domain: {user.domain}</p>
+            <p>{user.domain}</p>
             <p>Available: {user.available ? 'Yes' : 'No'}</p>
           </div>
         ))}

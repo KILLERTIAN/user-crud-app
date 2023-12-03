@@ -10,10 +10,7 @@ function Navbar() {
       <h3 className='logo'><Link to='/' className='logoLink'>UCRUD</Link>
       </h3>
       <div className='searchMenu'>
-        <div className='userSearch'>
-          <input type='text' placeholder='Search user name or Id' className='searchInput'/>
-          <ion-icon className='userSearchIcon' name='search'></ion-icon>
-        </div>
+        
         <button className='menuButton' onClick={() => {console.log('Button clicked');setShowMobileMenu(true)} }>
           <ion-icon name='menu-outline'></ion-icon>
         </button>

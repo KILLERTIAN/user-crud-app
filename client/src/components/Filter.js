@@ -1,11 +1,12 @@
 import React from "react";
+import debounce from "lodash.debounce";
 import "./Filter.css";
 
 const Filter = ({ onFilterChange }) => {
-  const handleFilterChange = (e) => {
+  const handleFilterChange = debounce((e) => {
     const { name, value } = e.target;
     onFilterChange(name, value);
-  };
+  }, 300);
 
   return (
     <div className="filterContainer">
@@ -36,12 +37,18 @@ const Filter = ({ onFilterChange }) => {
         onChange={handleFilterChange}
       >
         <option value="">All Domains</option>
-        <option value="domain1">Domain 1</option>
-        <option value="domain2">Domain 2</option>
-        <option value="domain3">Domain 3</option>
+        <option value="Marketing">Marketing</option>
+        <option value="Finance">Finance</option>
+        <option value="Sales">Sales</option>
+        <option value="Business Development">Business Development</option>
+        <option value="IT">IT</option>
+        <option value="UI Designing">UI Designing</option>
       </select>
 
-      <button className="filterButton">Apply Filters</button>
+      <div className='userSearch'>
+          <input type='text' placeholder='Search user name or Id' className='searchInput' onChange={handleFilterChange}/>
+          <ion-icon className='userSearchIcon' name='search'></ion-icon>
+        </div>
     </div>
   );
 };
