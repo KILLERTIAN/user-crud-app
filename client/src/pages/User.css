@@ -103,12 +103,12 @@
 }
 
 .editUserButtons button:nth-child(1) {
-  background-color: #4caf50; /* Green color for the "Save" button */
+  background-color: #4caf50; 
   color: #fff;
 }
 
 .editUserButtons button:nth-child(2) {
-  background-color: #f44336; /* Red color for the "Cancel" button */
+  background-color: #f44336;
   color: #fff;
 }
 

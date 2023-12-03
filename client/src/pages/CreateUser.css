@@ -2,10 +2,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    flex-direction: column;
+    /* height: 90vh; */
     padding: 20px;
   }
-  
+  .createUserContainer>h1{
+    margin: 5px 0 15px 0;
+  }
   .createUserBox {
     display: flex;
     background-color: rgb(241, 224, 255);
