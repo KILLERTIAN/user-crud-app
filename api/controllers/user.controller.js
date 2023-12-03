@@ -1,12 +1,49 @@
 import User from "../models/user.model.js";
 import createError from "../utils/createError.js";
 
-export const createUser = (req, res) => {
-  res.send("from controller");
+export const createUser = async (req, res, next) => {
+  const newUser = new User({
+    ...req.body,
+  });
+
+  try {
+    const savedUser = await newUser.save();
+    res.status(201).json(savedUser);
+  } catch (err) {
+    next(err);
+  }
 };
 
-export const deleteUser = (req, res) => {
-  res.send("from controller");
+export const deleteUser = async (req, res, next) => {
+  // const user = await User.findById(req.params.id);
+
+  // if (req.userId !== user._id.toString()) {
+  //   return next(createError(403, "You can delete only your account!"));
+  // }
+  await User.findByIdAndDelete(req.params.id);
+  res.status(200).send("deleted.");
+};
+
+export const updateUser = async (req, res, next) => {
+  const userId = req.params.id;
+  const updatedFields = req.body;
+
+  try {
+    // Update the user based on the specified ID
+    const updatedUser = await User.findOneAndUpdate(
+      { _id: userId },
+      { $set: updatedFields },
+      { new: true } // This option returns the updated document
+    );
+
+    if (!updatedUser) {
+      return res.status(404).send("User not found");
+    }
+
+    res.status(200).json(updatedUser);
+  } catch (err) {
+    next(err);
+  }
 };
 
 export const getUser = async (req, res, next) => {
@@ -22,7 +59,7 @@ export const getUser = async (req, res, next) => {
 export const getUsers = async (req, res, next) => {
   const q = req.query;
   const filters = {
-    ...(q.email && { email: q.email }),
+    ...(q.available && { available: q.available }),
     ...(q.gender && { gender: q.gender }),
     ...(q.domain && { domain: q.domain }),
   };
