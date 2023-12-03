@@ -45,10 +45,16 @@ const Filter = ({ onFilterChange }) => {
         <option value="UI Designing">UI Designing</option>
       </select>
 
-      <div className='userSearch'>
-          <input type='text' placeholder='Search user name or Id' className='searchInput' onChange={handleFilterChange}/>
-          <ion-icon className='userSearchIcon' name='search'></ion-icon>
-        </div>
+      <div className="userSearch">
+        <input
+          name="search"
+          type="text"
+          placeholder="Search user name or Id"
+          className="searchInput"
+          onChange={handleFilterChange}
+        />
+        <ion-icon className="userSearchIcon" name="search"></ion-icon>
+      </div>
     </div>
   );
 };
