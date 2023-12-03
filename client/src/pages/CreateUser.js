@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './CreateUser.css';
 
 
-const avatarList = [
+export const avatarList = [
     'https://robohash.org/sintessequaerat.png?size=50x50&set=set1',
     'https://robohash.org/temporibusporrolaboriosam.png?size=50x50&set=set1',
     'https://robohash.org/laboriosamdolorepossimus.png?size=50x50&set=set1',

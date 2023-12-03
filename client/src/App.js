@@ -4,7 +4,6 @@ import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import User from './pages/User';
 import CreateUser from './pages/CreateUser';
-import CreateTeam from './pages/CreateTeam';
 
 function App() {
   return (
@@ -15,7 +14,6 @@ function App() {
           <Route path='/' exact element={<Hero />} />
           <Route path='/users' exact element={<User />} />
           <Route path='/create-users' exact element={<CreateUser/>} />
-          <Route path='/create-team' exact element={<CreateTeam/>} />
         </Routes>
       </Router>
     </div>

@@ -34,15 +34,15 @@ function Navbar() {
             <li>
               <Link to='/create-users'>Create User</Link>
             </li>
-            {/* <li>
-              <Link to='/'>Update User</Link>
-            </li>
             <li>
+              <Link to='/users'>Users</Link>
+            </li>
+            {/* <li>
               <Link to='/'>Delete User</Link>
             </li> */}
-            <li>
+            {/* <li>
               <Link to='/create-team'>Create a Team</Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       )}
