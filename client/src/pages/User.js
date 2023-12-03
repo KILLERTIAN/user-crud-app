@@ -1,27 +1,41 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./User.css";
+import Filter from "../components/Filter";
 
 function User() {
   const [users, setUsers] = useState([]);
+  const [filter, setFilter] = useState({
+    gender: "",
+    availability: "",
+    domain: "",
+  });
 
   useEffect(() => {
-    // console.log('useEffect triggered');
     fetchData();
-  }, []);
+  }, [filter]);
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/api/users");
-      // console.log('Axios Response:', response);
+      const response = await axios.get("http://localhost:8000/api/users", {
+        params: filter,
+      });
       setUsers(response.data);
     } catch (error) {
       console.error("Error fetching data:", error.message);
     }
   };
 
+  const handleFilterChange = (name, value) => {
+    setFilter({
+      ...filter,
+      [name]: value,
+    });
+  };
+
   return (
     <div className="userContainer">
+    <Filter onFilterChange={handleFilterChange} />
       <div className="cardContainer">
         {users.map((user) => (
           <div className="card" key={user._id}>

@@ -35,7 +35,7 @@ export const getUsers = async (req, res, next) => {
   }
   // Pagination options
   const page = parseInt(q.page) || 1;
-  const limit = parseInt(q.limit) || 1;
+  const limit = parseInt(q.limit) || 20;
   const skip = (page - 1) * limit;
 
   try {

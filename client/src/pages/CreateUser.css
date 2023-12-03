@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
+    padding: 20px;
   }
   
   .createUserBox {
@@ -15,14 +16,95 @@
   }
   
   .createUserAvatarContainer {
-    flex: 1;
-    padding: 16px;
+    display: flex;
+    padding: 25px 16px;
     /* background: linear-gradient(to right ,rgb(90, 0, 169),#4d005e ); */
     background: #aa3bff;
-    display: flex;
     justify-content: center;
     align-items: center;
     width: 150px;
+  }
+  .userAvatarContainer .avatar {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #d1d1d1;
+    background: #f9edff;
+}
+  .createUserAvatarContainer .avatarOptions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .createUserAvatarContainer .avatarOptions img {
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .createUserAvatarContainer .avatarOptions img:hover {
+    transform: scale(1.1);
+  }
+  
+  .userAvatarContainer {
+    position: relative;
+}
+
+.editAvatarButton {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 5px;
+    right: 5px;
+    background: #ffffff;
+    border: 2px solid #d1d1d1;
+    color: #000000;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.editAvatarButton:hover {
+    background: #f2dcff;
+}
+
+  
+  .avatarEditingPopup {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  
+  .avatarEditingPopup h3 {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  
+  .avatarEditingPopup .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #777;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .avatarEditingPopup .closeButton:hover {
+    color: #333;
   }
   
   .createUserDataContainer {
@@ -57,6 +139,8 @@
     gap: 16px;
     grid-template-columns: 1fr 1fr;
   }
+
+
   .createUserDataContainer button{
     padding: 8px 10px;
     border-radius: 25px;
@@ -75,6 +159,9 @@
     }
   }
   @media (max-width: 768px) {
+    .createUserContainer{
+        height: unset;
+    }
     .createUserBox{
         flex-direction: column;
     }
@@ -82,7 +169,10 @@
         width: 300px;
     }
   }
-  @media (max-width: 300px) {
+  @media (max-width: 360px) {
+    .createUserContainer{
+        height: unset;
+    }
     .createUserAvatarContainer{
         width: 250px;
     }
