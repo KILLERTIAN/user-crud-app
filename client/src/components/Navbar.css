@@ -86,6 +86,8 @@
     z-index: 1000;
     padding: 20px;
     align-items: flex-start;
+    justify-content: center;
+    text-align: center;
   }
   
 .menuContainer.show {

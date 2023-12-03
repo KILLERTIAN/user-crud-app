@@ -32,16 +32,16 @@ function Navbar() {
               <Link to='/'>Home</Link>
             </li>
             <li>
-              <Link to='/'>Create User</Link>
+              <Link to='/create-users'>Create User</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to='/'>Update User</Link>
             </li>
             <li>
               <Link to='/'>Delete User</Link>
-            </li>
+            </li> */}
             <li>
-              <Link to='/'>Create a Team</Link>
+              <Link to='/create-team'>Create a Team</Link>
             </li>
           </ul>
         </div>

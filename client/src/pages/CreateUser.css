@@ -1,0 +1,93 @@
+.createUserContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .createUserBox {
+    display: flex;
+    background-color: rgb(241, 224, 255);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 142, 142, 0.1);
+    overflow: hidden;
+    flex-direction: row-reverse;
+  }
+  
+  .createUserAvatarContainer {
+    flex: 1;
+    padding: 16px;
+    /* background: linear-gradient(to right ,rgb(90, 0, 169),#4d005e ); */
+    background: #aa3bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+  }
+  
+  .createUserDataContainer {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 16px;
+  }
+  
+  .createUserDataContainer form {
+    display: grid;
+    gap: 16px;
+  }
+  
+  .createUserDataContainer label {
+    font-weight: bold;
+  }
+  
+  .createUserDataContainer input,
+  .createUserDataContainer select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    box-sizing: border-box;
+  }
+  .createUserDataContainer input:focus,.createUserDataContainer select:focus{
+    outline: 2px solid rgb(233, 192, 255);
+  }
+  .createUserDataContainer .nameInputs {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .createUserDataContainer button{
+    padding: 8px 10px;
+    border-radius: 25px;
+    font-size: 1.1em;
+    border: none;
+    color: #fff;
+    width: auto;
+    background: #c561ff;
+    cursor: pointer;
+  }
+  
+  /* Media query for smaller screens */
+  @media (min-width: 768px) {
+    .createUserDataContainer .nameInputs {
+      grid-template-columns: 1fr; /* Change to single column layout for smaller screens */
+    }
+  }
+  @media (max-width: 768px) {
+    .createUserBox{
+        flex-direction: column;
+    }
+    .createUserAvatarContainer{
+        width: 300px;
+    }
+  }
+  @media (max-width: 300px) {
+    .createUserAvatarContainer{
+        width: 250px;
+    }
+    .createUserDataContainer{
+        width: 250px;
+    }
+  }
+  
