@@ -14,7 +14,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "server.js"
+      "dest": "/api/users"
     }
   ]
 }
