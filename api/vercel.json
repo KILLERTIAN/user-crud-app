@@ -9,12 +9,8 @@
     "routes": [
       {
         "src": "/api/users(.*)", 
-        "dest": "/api/users$1", 
+        "dest": "/", 
         "methods": ["GET", "POST", "PUT", "DELETE"] 
-      },
-      {
-        "src": "/(.*)",
-        "dest": "server.js" 
       }
     ]
   }
