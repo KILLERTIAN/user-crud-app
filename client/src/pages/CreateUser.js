@@ -43,7 +43,7 @@ function CreateUser() {
 
         try {
             // Make a POST request to the server endpoint
-            const response = await fetch("http://localhost:8000/api/users", {
+            const response = await fetch("https://user-crud-app-api.onrender.com/api/users", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -69,7 +69,7 @@ function CreateUser() {
 
     return (
         <div className="createUserContainer">
-        <h1>Enter User Details</h1>
+            <h1>Enter User Details</h1>
             <div className="createUserBox">
                 <div className="createUserAvatarContainer">
                     <div className="userAvatarContainer">
@@ -172,9 +172,9 @@ function CreateUser() {
                             onChange={handleInputChange}
                             required
                         >
-                           <option value="">All Availabilities</option>
-        <option value="true">Available</option>
-        <option value="false">Not Available</option>
+                            <option value="">All Availabilities</option>
+                            <option value="true">Available</option>
+                            <option value="false">Not Available</option>
                         </select>
 
                         <button type="submit">Create User</button>

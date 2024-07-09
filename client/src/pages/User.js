@@ -18,7 +18,7 @@ function User() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/api/users', {
+      const response = await axios.get('https://user-crud-app-api.onrender.com/api/users', {
         params: filter,
       });
       setUsers(response.data);
@@ -41,7 +41,7 @@ function User() {
   const handleSaveEdit = async () => {
     try {
       // Assume the server API supports updating user details
-      await axios.put(`http://localhost:8000/api/users/${editingUser._id}`, editingUser);
+      await axios.put(`https://user-crud-app-api.onrender.com/api/users/${editingUser._id}`, editingUser);
       fetchData();
       setEditingUser(null);
     } catch (error) {
@@ -57,7 +57,7 @@ function User() {
     const shouldDelete = window.confirm('Are you sure you want to delete?');
     if (shouldDelete) {
       try {
-        await axios.delete(`http://localhost:8000/api/users/${userId}`);
+        await axios.delete(`https://user-crud-app-api.onrender.com/api/users/${userId}`);
         fetchData();
       } catch (error) {
         console.error('Error deleting data:', error.message);
