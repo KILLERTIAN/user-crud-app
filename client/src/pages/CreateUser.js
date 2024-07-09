@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./CreateUser.css";
 import { useNavigate } from "react-router-dom";
+import "./CreateUser.css";
 
 export const avatarList = [
     "https://robohash.org/sintessequaerat.png?size=50x50&set=set1",
@@ -17,6 +17,8 @@ export const avatarList = [
 ];
 
 function CreateUser() {
+    const navigate = useNavigate(); // Initialize useNavigate hook
+
     const [formData, setFormData] = useState({
         first_name: "",
         last_name: "",
@@ -54,8 +56,8 @@ function CreateUser() {
 
             // Check if the request was successful (status code 2xx)
             if (response.ok) {
-                console.log("User created successfully!");
-                navigate("/users");
+                window.alert("User created successfully!");
+                navigate("/users"); // Navigate to the users page after successful creation
             } else {
                 console.error("Failed to create user:", response.statusText);
             }
@@ -166,7 +168,8 @@ function CreateUser() {
                             <option value="IT">IT</option>
                             <option value="UI Designing">UI Designing</option>
                         </select>
-                        <label htmlFor="domain">Domain</label>
+
+                        <label htmlFor="available">Availability</label>
                         <select
                             id="available"
                             name="available"
