@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./CreateUser.css";
+import { useNavigate } from "react-router-dom";
 
 export const avatarList = [
     "https://robohash.org/sintessequaerat.png?size=50x50&set=set1",
@@ -54,6 +55,7 @@ function CreateUser() {
             // Check if the request was successful (status code 2xx)
             if (response.ok) {
                 console.log("User created successfully!");
+                navigate("/users");
             } else {
                 console.error("Failed to create user:", response.statusText);
             }
